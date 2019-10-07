@@ -2,22 +2,22 @@
 RTP: 
 
 vera molnar
-iteraction, randomness, noise
+- iteraction, randomness, noise
 
 john whitney 
-sin / cos (trigonometry), time, animation
+- sin / cos (trigonometry), time, animation
 
 muriel cooper, john maeda
-typography
+- typography
 
 lillian schwartz, ken knowlton
-pixels, mosiac
+- pixels, mosiac
 
 nancy burson, jason salavon
-computational images
+- computational images
 
 myron krueger, camille utterback
-computer vision
+- computer vision
 
 woody and steina vesulka, rosa menkman 
-video art & glitch
+- video art & glitch
