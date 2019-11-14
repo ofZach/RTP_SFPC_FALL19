@@ -7,9 +7,6 @@
 // finder: our contour finder, which will find the white figure in our input mov
 // trail: an ofPolyline that keeps track of the top point of the contour. We draw this trail in red.
 //
-// Still confused by:
-// We should've setSortBySize = True for the finder, to make sure we grab the biggest contour. bc it's only coincidence that our input.mov has one white figure.
-//
 //--------------------------------------------------------------
 void ofApp::setup(){
 
