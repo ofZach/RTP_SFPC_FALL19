@@ -3,16 +3,21 @@
 #include "spikeScene.h"
 #include "randomLineScene.h"
 #include "noiseScene.h"
+#include "historyScene.h"
+#include "wavyScene.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
 
     
     IM.setup();
-    
+  
+  
+    SM.scenes.push_back(new historyScene());
+    SM.scenes.push_back(new wavyScene());
+    SM.scenes.push_back(new spikeScene());
     SM.scenes.push_back(new noiseScene());
     SM.scenes.push_back(new emptyScene());
-    SM.scenes.push_back(new spikeScene());
     SM.scenes.push_back(new randomLineScene());
     
     // share a pointer to the CT object 
