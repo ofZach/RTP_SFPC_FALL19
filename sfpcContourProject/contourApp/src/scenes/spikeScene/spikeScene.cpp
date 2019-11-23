@@ -20,23 +20,18 @@ void spikeScene::update(){
 
 //---------------------------------------------------------------
 void spikeScene::draw(){
-    
-    
     CT->resampleSmoothed.draw();
 
     for (int i = 0; i < CT->resampleSmoothed.size(); i++){
-        
-        int i_m_1 = i-1;
-        int i_p_1 = i+1;
-        if (i_m_1 < 0) i_m_1 += CT->resampleSmoothed.size();
-        i_p_1 %=  CT->resampleSmoothed.size();
-        
-        ofPoint a = CT->resampleSmoothed[i_m_1];
-        ofPoint b = CT->resampleSmoothed[i_p_1];
-        ofPoint diff = b-a;
-        diff = diff.getNormalized();
-        diff.rotate(-90, ofPoint(0,0,1));
-        ofLine(CT->resampleSmoothed[i], CT->resampleSmoothed[i] + diff* 100);
-        //ofCircle(CT->resampleSmoothed[i], 3);
+      // the normal is a vector at a right angle to the curve
+      // this vector has a length of 1
+      ofPoint normal = CT->resampleSmoothed.getNormalAtIndex(i);
+      
+      // we draw the vector relative to the vertex
+      ofDrawLine(
+                 // start at the vertex...
+                 CT->resampleSmoothed[i],
+                 // ...end at normal * 50 (scales line by 50 pixels)
+                 CT->resampleSmoothed[i] + normal * 50);
     }
 }
