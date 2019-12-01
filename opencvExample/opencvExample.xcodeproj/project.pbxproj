@@ -7031,6 +7031,7 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
+						<string>src</string>
 						<string>../../../addons/ofxCv/libs/ofxCv/include</string>
 						<string>../../../addons/ofxCv/libs/CLD/include/CLD</string>
 						<string>../../../addons/ofxCv/src</string>
@@ -7124,6 +7125,7 @@ fi
 					<key>HEADER_SEARCH_PATHS</key>
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
+						<string>src</string>
 						<string>src</string>
 						<string>../../../addons/ofxCv/libs/ofxCv/include</string>
 						<string>../../../addons/ofxCv/libs/CLD/include/CLD</string>
@@ -9982,6 +9984,7 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
+						<string>src</string>
 						<string>../../../addons/ofxCv/libs/ofxCv/include</string>
 						<string>../../../addons/ofxCv/libs/CLD/include/CLD</string>
 						<string>../../../addons/ofxCv/src</string>
@@ -10095,6 +10098,7 @@ fi
 					<key>HEADER_SEARCH_PATHS</key>
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
+						<string>src</string>
 						<string>src</string>
 						<string>../../../addons/ofxCv/libs/ofxCv/include</string>
 						<string>../../../addons/ofxCv/libs/CLD/include/CLD</string>
@@ -10293,6 +10297,7 @@ fi
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
 						<string>src</string>
+						<string>src</string>
 						<string>../../../addons/ofxCv/libs/ofxCv/include</string>
 						<string>../../../addons/ofxCv/libs/CLD/include/CLD</string>
 						<string>../../../addons/ofxCv/src</string>
@@ -10398,6 +10403,7 @@ fi
 					<key>HEADER_SEARCH_PATHS</key>
 					<array>
 						<string>$(OF_CORE_HEADERS)</string>
+						<string>src</string>
 						<string>src</string>
 						<string>../../../addons/ofxCv/libs/ofxCv/include</string>
 						<string>../../../addons/ofxCv/libs/CLD/include/CLD</string>

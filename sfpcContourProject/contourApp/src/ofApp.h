@@ -65,4 +65,8 @@ class ofApp : public ofBaseApp{
     bool bPresentationMode = false;
     
     ofVideoPlayer bodyVid;
+    
+    ofTrueTypeFont font3;
+    
+    
 };

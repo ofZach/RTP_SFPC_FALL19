@@ -25,7 +25,7 @@ void Kath_scene1::draw(){
 	ofEnableBlendMode(OF_BLENDMODE_SCREEN);
 
 	
-	
+    ofSetCircleResolution(50);
 	////// draw dots:
 	
 	if (history.size() > 50) {
@@ -38,7 +38,7 @@ void Kath_scene1::draw(){
 		
 		for(int j = 0; j < history[i].size(); j++) {
 			
-			float wave = ofMap(sin(ofGetElapsedTimef()), -1, 1, -j, 0);
+			float wave = ofMap(sin(ofGetElapsedTimef() + i * 0.01), -1, 1, -j*4, 0);
 			ofNoFill();
 			ofDrawCircle(history[i][j].x, history[i][j].y += wave, wave);
 			

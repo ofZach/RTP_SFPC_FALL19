@@ -23,6 +23,8 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+    font2.load("Agipo regular.otf", 100, true, true, true);
+    
     ofSetVerticalSync(false);
    
     bPresentationMode = true;
@@ -39,52 +41,53 @@ void ofApp::setup(){
     ofSetWindowPosition(r.x, r.y);
     noPersonEnergy = 0;
     
-    //ofSetFullscreen(true);
+    ofSetFullscreen(true);
     
     IM.setup();
 //    SM.scenes.push_back(new emptyScene());
 //    SM.scenes.back()->studentName = "hello";
 
 
-    SM.scenes.push_back(new emptyScene());
-    SM.scenes.back()->studentName = "hello";
-    
+//    SM.scenes.push_back(new emptyScene());
+//    SM.scenes.back()->studentName = "hello";
+//
     
 SM.scenes.push_back(new Kath_scene1());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Katherine Diemert";
 SM.scenes.push_back(new allisonScene());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Allison Chan";
 SM.scenes.push_back(new estherScene());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Esther Bouquet";
 SM.scenes.push_back(new franScene());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Francisco Rojo";
 SM.scenes.push_back(new giaScene());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Gia Castello";
 SM.scenes.push_back(new iainShapesScene());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Iain Nash";
 SM.scenes.push_back(new maxbBallScene());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Max Bittker";
 SM.scenes.push_back(new maxbScene());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Max Bittker";
 SM.scenes.push_back(new mncScene());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Maxwell Neely-Cohen";
     SM.scenes.push_back(new mncScene2());
-    SM.scenes.back()->studentName = "hello";
+    SM.scenes.back()->studentName = "Maxwell Neely-Cohen";
 SM.scenes.push_back(new mouwraoScene());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Mathilde Mouw-Rao";
 SM.scenes.push_back(new shelbyScene());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Shelby Wilson";
 SM.scenes.push_back(new shelbyScene2());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Shelby Wilson";
 SM.scenes.push_back(new shelbyScene3());
-     SM.scenes.back()->studentName = "hello";
-SM.scenes.push_back(new shelbyScene4());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Shelby Wilson";
+//SM.scenes.push_back(new shelbyScene4());
+//     SM.scenes.back()->studentName = "Shelby Wilson";
 SM.scenes.push_back(new yuzhuChaiScene());
-     SM.scenes.back()->studentName = "hello";
+     SM.scenes.back()->studentName = "Yuzhu Chai";
 
     
     
+    ofRandomize(SM.scenes);
     
     
     
@@ -347,6 +350,13 @@ void ofApp::draw(){
             if (bodyVid.isPaused() == false){
                 bodyVid.setPaused(true);
             }
+            
+            
+            ofRectangle r = font.getStringBoundingBox(SM.scenes[SM.currentScene]->studentName, 0,0);
+            r.scaleFromCenter(1.2);
+            ofSetColor(255 - 255*noPersonEnergy);
+            font.drawString(SM.scenes[SM.currentScene]->studentName,  ofGetWidth()-r.width, ofGetHeight()-r.height);
+    
         }
         
         ofClearAlpha();
