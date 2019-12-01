@@ -13,7 +13,7 @@ public:
     void draw();
     void nextScene();
     
-    
+    void drawGUI();
     
     vector < baseScene * > scenes;
     int currentScene;

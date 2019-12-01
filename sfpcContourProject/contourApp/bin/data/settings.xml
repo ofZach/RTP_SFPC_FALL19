@@ -1,12 +1,34 @@
+<?xml version="1.0"?>
 <group>
 	<settings>
-		<threshold>154</threshold>
+		<threshold>191</threshold>
 		<speed>1</speed>
-		<medianFilterAmount>5</medianFilterAmount>
+		<medianFilterAmount>1</medianFilterAmount>
 	</settings>
-<group/>
-<kinectV2_013751441647>
-		<minDistance>918.367</minDistance>
-		<maxDistance>2448.98</maxDistance>
+	<group>
+		<scale>2.1</scale>
+		<xOffset>0</xOffset>
+		<yOffset>-938.776</yOffset>
+		<centerSmoothing>0.95</centerSmoothing>
+		<pt_0>0, 0, 0</pt_0>
+		<pt_1>1080, 0, 0</pt_1>
+		<pt_2>1080, 1920, 0</pt_2>
+		<pt_3>0, 1920, 0</pt_3>
+	</group>
+	<kinectV2_013751441647>
+		<minDistance>50</minDistance>
+		<maxDistance>3500</maxDistance>
 	</kinectV2_013751441647>
+	<scale>2.88265</scale>
+	<xOffset>0</xOffset>
+	<yOffset>-1387.76</yOffset>
+	<centerSmoothing>0.95</centerSmoothing>
+	<pt_0>32.0701, 271.554, 0</pt_0>
+	<pt_1>1052.48, 146.606, 0</pt_1>
+	<pt_2>1031.65, 1760.52, 0</pt_2>
+	<pt_3>136.193, 1750.1, 0</pt_3>
+	<blurRadius>50</blurRadius>
+	<minCircle>95.9184</minCircle>
+	<maxCircle>200</maxCircle>
+	<bodyBlur>16.3265</bodyBlur>
 </group>

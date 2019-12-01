@@ -24,7 +24,7 @@ void contourTracker::analyze( ofPolyline & curFrame ){
     }
     
  
-    if (prevFrame.size() > 0){
+    if (prevFrameOrig.size() > 0){
         
         // if you want to make this faster
         // you will get an A +
@@ -38,7 +38,7 @@ void contourTracker::analyze( ofPolyline & curFrame ){
             
             float avgLen = 0;
             for (int j = 0; j < 180; j++){
-                avgLen += ((ofPoint)resampled[ (j + i ) % 180] - (ofPoint)prevFrame[j]).length() / 180.0;
+                avgLen += ((ofPoint)resampled[ (j + i ) % 180] - (ofPoint)prevFrameOrig[j]).length() / 180.0;
             }
             if (avgLen < smallestAvgLen){
                 smallestAvgLen = avgLen;
@@ -63,15 +63,15 @@ void contourTracker::analyze( ofPolyline & curFrame ){
         tempT.getVertices().push_back(tempT[tempT.size()-1]);
     }
     
-    if (resampleSmoothed.size() == 0){
-        resampleSmoothed = tempT;
+    if (resampleSmoothedOrig.size() == 0){
+        resampleSmoothedOrig = tempT;
     } else {
         for (int i = 0; i < 100; i++){
-            resampleSmoothed[i] = 0.55f * resampleSmoothed[i] + 0.45f * tempT[i];
+            resampleSmoothedOrig[i] = 0.55f * resampleSmoothedOrig[i] + 0.45f * tempT[i];
         }
     }
     
-    for (auto p : resampleSmoothed.getVertices()){
+    for (auto p : resampleSmoothedOrig.getVertices()){
         
         unsigned int nearestIndex = 0;
         resampled.getClosestPoint(p, &nearestIndex);
@@ -80,7 +80,7 @@ void contourTracker::analyze( ofPolyline & curFrame ){
     }
     
     
-    prevFrame = resampled;
+    prevFrameOrig = resampled;
 
 }
 

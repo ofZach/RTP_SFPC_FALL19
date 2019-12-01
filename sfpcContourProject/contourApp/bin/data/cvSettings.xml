@@ -1,0 +1,11 @@
+<group>
+	<settings>
+		<threshold>137</threshold>
+		<speed>1</speed>
+		<medianFilterAmount>1</medianFilterAmount>
+	<learnBG>0</learnBG>
+		<threshold2>200</threshold2>
+		<bUseBothThresholds>0</bUseBothThresholds>
+		<distanceFromBg>10</distanceFromBg>
+	</settings>
+<group/>

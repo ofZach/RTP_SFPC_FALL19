@@ -10,6 +10,10 @@ void sceneManager::setup(){
         scenes[i]->setup();
     }
     
+    for (int i = 0; i < scenes.size(); i++){
+        scenes[i]->panel.setPosition(ofPoint(20,50));
+    }
+    
     // range based for loop
 //    for (auto scene : scenes){
 //        scene->setup();
@@ -28,7 +32,18 @@ void sceneManager::nextScene(){
 
 //---------------------------------------------------------------
 void sceneManager::update(){
+    scenes[currentScene]->currentFrame = ofGetFrameNum();
+    scenes[currentScene]->currentPct = sin(ofGetElapsedTimef()*0.1 ) * 0.5 + 0.5;
+    
     scenes[currentScene]->update();
+    
+}
+
+
+//---------------------------------------------------------------
+void sceneManager::drawGUI(){
+    
+    scenes[currentScene]->panel.draw();
     
 }
 

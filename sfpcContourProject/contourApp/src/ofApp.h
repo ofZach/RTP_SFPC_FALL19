@@ -6,6 +6,7 @@
 #include "sceneManager.h"
 #include "baseScene.h"
 #include "inputManager.h"
+#include "contourFramer.h"
 
 
 
@@ -32,8 +33,36 @@ class ofApp : public ofBaseApp{
         inputManager            IM;
         contourTracker          CT;
         sceneManager            SM;
+        contourFramer           CF;
     
-    bool bDrawDebug;
+    
+        bool bDrawDebug;
+
+        ofPoint rectPosSmoothed;
+        float rectWidthSmoothed;
+        float noPersonEnergy;
+
+        ofTrueTypeFont font;
+
+        ofTrueTypeFont font2;
+
+        int nFramesInScene = 0;
+
+        bool bOkToChangeOnStepOut = false;
+        ofParameter < float > scale;
+        ofParameter < float > xOffset;
+        ofParameter < float > yOffset;
+        ofParameter < float > centerSmoothing;
+        ofParameter < ofPoint > pts[4];
+    
+        ofParameterGroup group;
+        ofxPanel panel;
     
     
+    
+    
+        ofFbo mainFbo;
+    bool bPresentationMode = false;
+    
+    ofVideoPlayer bodyVid;
 };

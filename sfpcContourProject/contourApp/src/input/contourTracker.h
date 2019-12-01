@@ -11,8 +11,8 @@ public:
     void draw();
     
     
-    ofPolyline prevFrame;
+    ofPolyline prevFrameOrig;
+    ofPolyline resampleSmoothedOrig;
+    
     ofPolyline resampleSmoothed;
-    
-    
 };
