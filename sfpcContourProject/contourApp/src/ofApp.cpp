@@ -17,6 +17,7 @@
 #include "shelbyScene3.h"
 #include "shelbyScene4.h"
 #include "yuzhuChaiScene.h"
+#include "zaiScene.h"
 
 
 
@@ -51,7 +52,8 @@ void ofApp::setup(){
 //    SM.scenes.push_back(new emptyScene());
 //    SM.scenes.back()->studentName = "hello";
 //
-    
+    SM.scenes.push_back(new zaiScene());
+    SM.scenes.back()->studentName = "Zainab Aliyu";
 SM.scenes.push_back(new Kath_scene1());
      SM.scenes.back()->studentName = "Katherine Diemert";
 SM.scenes.push_back(new allisonScene());
@@ -87,7 +89,7 @@ SM.scenes.push_back(new yuzhuChaiScene());
 
     
     
-    ofRandomize(SM.scenes);
+    //ofRandomize(SM.scenes);
     
     
     
@@ -197,7 +199,16 @@ void ofApp::update(){
     ofRectangle inputScaled = input;
     inputScaled.scaleTo(output);
 
+    bool bOk = true;
     if (IM.finder.size() > 0){
+        float contourSize = fabs(IM.finder.getContourArea(0));
+        if (contourSize < IM.minBlobSize){
+            bOk = false;
+        }
+    }
+    
+    if (IM.finder.size() > 0 && bOk){
+        
         
         
         bOkToChangeOnStepOut = true;
